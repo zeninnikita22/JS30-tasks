@@ -1,0 +1,35 @@
+body {
+  background-image: url(background.jpg);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  flex-wrap: wrap;
+}
+.drum {
+  border: 2px solid black;
+  text-align: center;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  width: 40px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+  transition: all 0.07s;
+}
+p {
+  color: yellow;
+  font-size: 8pt;
+}
+kbd {
+  color: white;
+  font-size: 30pt;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #00ff73;
+  box-shadow: 0 0 1rem #00ff73;
+}
