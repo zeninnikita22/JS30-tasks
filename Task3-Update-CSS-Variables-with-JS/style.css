@@ -1,0 +1,117 @@
+:root {
+  --base: rgb(241, 202, 28);
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+body {
+  background-color: #193349;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs {
+  margin-bottom: 15px;
+}
+
+img {
+  margin-top: 10px;
+  max-height: 350px;
+  max-width: 400px;
+  border: 35px solid;
+  border-color: var(--base);
+  padding: var(--spacing);
+  filter: blur(var(--blur));
+}
+
+label {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+/* input {
+} */
+
+.header-text-one {
+  color: white;
+}
+
+.header-text-two {
+  color: var(--base);
+}
+
+/* .inputs {
+} */
+
+.wrapper {
+  /* display: flex;
+  align-items: center; */
+}
+
+#spacing-vol {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 1px; /* Specified height */
+  background: #a0a0a0; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  position: relative;
+  top: -5px;
+}
+#spacing-vol:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+#spacing-vol::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #a0a0a0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+#blur-vol {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 1px; /* Specified height */
+  background: #a0a0a0; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  position: relative;
+  top: -5px;
+}
+#blur-vol:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+#blur-vol::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #a0a0a0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+#fav-color {
+  border: none;
+  border-radius: 10%;
+  background-color: #a0a0a0;
+  height: 22px;
+}
