@@ -1,7 +1,7 @@
 :root {
   --base: rgb(241, 202, 28);
-  --spacing: 10px;
-  --blur: 10px;
+  --spacing: 0px;
+  --blur: 0px;
 }
 
 body {
@@ -27,6 +27,7 @@ img {
   max-width: 400px;
   border: 35px solid;
   border-color: var(--base);
+  border-radius: 10%;
   padding: var(--spacing);
   filter: blur(var(--blur));
 }
@@ -36,9 +37,6 @@ label {
   font-style: italic;
 }
 
-/* input {
-} */
-
 .header-text-one {
   color: white;
 }
@@ -47,31 +45,23 @@ label {
   color: var(--base);
 }
 
-/* .inputs {
-} */
-
-.wrapper {
-  /* display: flex;
-  align-items: center; */
-}
-
-#spacing-vol {
-  -webkit-appearance: none; /* Override default CSS styles */
+#spacing {
+  -webkit-appearance: none;
   appearance: none;
-  height: 1px; /* Specified height */
-  background: #a0a0a0; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  height: 1px;
+  background: #a0a0a0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   position: relative;
   top: -5px;
 }
-#spacing-vol:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+#spacing:hover {
+  opacity: 1;
 }
 
-#spacing-vol::-webkit-slider-thumb {
+#spacing::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 15px;
@@ -82,23 +72,23 @@ label {
   border-radius: 5px;
 }
 
-#blur-vol {
-  -webkit-appearance: none; /* Override default CSS styles */
+#blur {
+  -webkit-appearance: none;
   appearance: none;
-  height: 1px; /* Specified height */
-  background: #a0a0a0; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  height: 1px;
+  background: #a0a0a0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   position: relative;
   top: -5px;
 }
-#blur-vol:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+#blur:hover {
+  opacity: 1;
 }
 
-#blur-vol::-webkit-slider-thumb {
+#blur::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 15px;
@@ -109,7 +99,7 @@ label {
   border-radius: 5px;
 }
 
-#fav-color {
+#base {
   border: none;
   border-radius: 10%;
   background-color: #a0a0a0;
