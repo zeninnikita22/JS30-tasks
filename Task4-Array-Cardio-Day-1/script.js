@@ -148,3 +148,44 @@ const transport = data.reduce(function (object, item) {
   object[item]++;
   return object;
 }, {});
+
+// additional reduce method practice (not JS30 but still adding it here)
+// 1. Get average from the array of numbers
+
+const someArray = [1, 2, 3, 5, 76, 86, 25, 12, 8, 0, 77, 32];
+
+function getAverage(arr) {
+  const reducedArr = arr.reduce(
+    (accumulator, current) => accumulator + current,
+    0
+  );
+  return reducedArr / arr.length;
+}
+
+// 2. Count number of jedi in the array of users
+
+const users = [
+  { username: "darth vader", jedi: false },
+  { username: "ray", jedi: true },
+  { username: "luke skywalker", jedi: true },
+  { username: "yoda", jedi: true },
+  { username: "queen padme", jedi: false },
+  { username: "obi wan kenobi", jedi: true },
+];
+const numberOfJedi = users.reduce(
+  (accumulator, current) => (current.jedi ? accumulator + 1 : accumulator + 0),
+  0
+);
+
+//3. Get an array of jedi from users array
+// first option with filter
+const arrOfJedi = users.filter((element) => {
+  return element.jedi;
+});
+// second option with reduce
+const redArrOfJedi = users.reduce(
+  (accumulator, current) =>
+    current.jedi ? accumulator + "" + current.username : accumulator + "",
+  ""
+);
+console.log(redArrOfJedi);
