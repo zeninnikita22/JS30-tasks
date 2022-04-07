@@ -8,7 +8,9 @@ fetch(url).then((response) =>
 
 console.log(cities);
 
-const inputText = document.querySelector(".input-text");
+const inputText = document.querySelector(".search");
+const suggestions = document.querySelector(".suggestions");
+
 inputText.addEventListener("change", displayMatches);
 inputText.addEventListener("keyup", displayMatches);
 
@@ -24,5 +26,25 @@ function findMatches(wordToMatch, cities) {
 }
 
 function displayMatches() {
-  console.log(this.value);
+  const matchArray = findMatches(this.value, cities);
+  const html = matchArray
+    .map((place) => {
+      const regex = new RegExp(this.value, "gi");
+      const cityName = place.city.replace(
+        regex,
+        `<span class="hl">${this.value}</span>`
+      );
+      const stateName = place.state.replace(
+        regex,
+        `<span class="hl">${this.value}</span>`
+      );
+      return `
+<li>
+  <span class="name">${cityName}, ${stateName}</span>
+  <span class="population">${place.population}</span>
+</li>
+`;
+    })
+    .join("");
+  suggestions.innerHTML = html;
 }
