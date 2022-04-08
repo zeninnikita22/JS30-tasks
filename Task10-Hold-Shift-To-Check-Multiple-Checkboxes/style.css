@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(60, 60, 168);
+  font-family: "Nunito", sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.elements-box {
+  background-color: aliceblue;
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 2%;
+  box-shadow: 5px 5px 1px rgb(115, 106, 236);
+  padding: 10px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.element {
+  display: flex;
+  align-items: center;
+  margin: 0px 5px 0px 5px;
+}
+/* .element-line {
+  display: flex;
+  align-items: center;
+  margin: 0px 5px 0px 5px;
+  text-decoration: line-through;
+} */
+.check {
+  padding: 10px;
+}
+.checktext {
+  margin-left: 15px;
+}
