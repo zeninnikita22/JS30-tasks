@@ -1,0 +1,55 @@
+body {
+  background-color: aquamarine;
+  font-family: "Nunito";
+  text-align: justify;
+}
+.wrapper {
+}
+
+h1 {
+  text-align: center;
+}
+.box {
+  width: 700px;
+  margin: auto;
+  background-color: white;
+  padding: 10px 30px;
+}
+.align-left {
+  float: left;
+  padding: 20px 20px 20px 0px;
+}
+
+.align-right {
+  float: right;
+  padding: 20px 0px 20px 20px;
+}
+
+#first-img {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  transform: translateX(-150%);
+}
+#second-img {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  transform: translateX(150%);
+}
+#third-img {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  transform: translateX(-150%);
+}
+#fourth-img {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  transform: translateX(150%);
+}
+#fifth-img {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  transform: translateX(150%);
+}
+
+.slide-in {
+}
