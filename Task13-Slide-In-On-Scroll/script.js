@@ -1,26 +1,21 @@
-window.addEventListener("scroll", () => {
-  const scrolledPixels = window.scrollY;
-  console.log(scrolledPixels);
+const leftImages = document.querySelectorAll(".align-left");
+const rightImages = document.querySelectorAll(".align-right");
 
-  const firstImage = document.getElementById("first-img");
-  const secondImage = document.getElementById("second-img");
-  const thirdImage = document.getElementById("third-img");
-  const fourthImage = document.getElementById("fourth-img");
-  const fifthImage = document.getElementById("fifth-img");
+function slidingImages() {
+  leftImages.forEach((leftImage) => {
+    const leftRect = leftImage.getBoundingClientRect();
+    if (leftRect.top - window.innerHeight < 0) {
+      leftImage.style.transform = "translateX(0%)";
+      leftImage.style.opacity = "100%";
+    }
+  });
+  rightImages.forEach((rightImage) => {
+    const rightRect = rightImage.getBoundingClientRect();
+    if (rightRect.top - window.innerHeight < 0) {
+      rightImage.style.transform = "translateX(0%)";
+      rightImage.style.opacity = "100%";
+    }
+  });
+}
 
-  if (scrolledPixels > 28) {
-    firstImage.style.transform = "translateX(0%)";
-  }
-  if (scrolledPixels > 522) {
-    secondImage.style.transform = "translateX(0%)";
-  }
-  if (scrolledPixels > 1332) {
-    thirdImage.style.transform = "translateX(0%)";
-  }
-  if (scrolledPixels > 1416) {
-    fourthImage.style.transform = "translateX(0%)";
-  }
-  if (scrolledPixels > 2178) {
-    fifthImage.style.transform = "translateX(0%)";
-  }
-});
+window.addEventListener("scroll", slidingImages);
